@@ -1,6 +1,9 @@
 header {
 
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -8,6 +11,14 @@ header h1 {
 
     font-size: 100px;
     color: #ffffff;
+    text-align: center;
+
+}
+
+header nav ul {
+
+    display: flex;
+    flex-direction: row;
 
 }
 
@@ -17,5 +28,6 @@ header nav ul a li {
     color: #ffffff;
     text-decoration: none;
     list-style: none;
+    text-align: center;
 
 }
