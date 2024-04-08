@@ -7,14 +7,14 @@ header {
 header h1 {
 
     font-size: 100px;
-    color: white;
+    color: #ffffff;
 
 }
 
 header nav ul a li {
 
     font-size: 50px;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     list-style: none;
 
