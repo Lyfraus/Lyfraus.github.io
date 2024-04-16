@@ -41,16 +41,7 @@
 
 }
 
-#creatediv input {
 
-    width: 75%;
-    padding: 1.75% 2.5% 1.75% 2.5%;
-    margin: 0 2% 2.5% 2%;
-    border-color: rgb(0, 33, 63);
-    border-width: 20px;
-    font-size: 18px;
-    
-}
 
 #exercises {
 
@@ -67,6 +58,58 @@
     background-color: rgb(0, 33, 63);
     align-items: center;
 
+}
+
+.seriesdiv {
+
+    width: 180px;
+
+}
+
+.serie {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 5px;
+
+}
+
+.serie h3 {
+
+    color: #ffffff;
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 4px;
+
+}
+
+.serie button{
+
+    background-color: rgb(173, 26, 0);
+    padding: 6px;
+    margin-bottom: 4px;
+    font-weight: 600;
+
+}
+
+.serie input {
+
+    width: 70px !important;
+
+}
+
+#creatediv input {
+
+    width: 75%;
+    padding: 1.75% 2.5% 1.75% 2.5%;
+    margin: 0 2% 2.5% 2%;
+    border-color: rgb(0, 33, 63);
+    border-width: 20px;
+    font-size: 18px;
+    
 }
 
 .divbuttons {
