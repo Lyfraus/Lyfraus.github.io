@@ -61,4 +61,6 @@ function handleResize(){
 
 }
 
+handleResize();
+
 window.addEventListener("resize",handleResize);

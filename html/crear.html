@@ -6,6 +6,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="stylesheet" href="../css/crear.css">
+        <link rel="stylesheet" href="../css/roundbox.css">
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/reset.css">
 
@@ -17,10 +19,51 @@
 
         <header>
 
-            <h1>| Rutinas |</h1>
+            <h1>Rutinas</h1>
             <h2>- Crear -</h2>
 
         </header>
+
+        <div id="body">
+
+            <div id="maindiv">
+
+                <div class="rowflex">
+                    <div class="cuadrado notext topleft azulclass">.</div>
+                    <div class="cuadrado notext mid azulclass">.</div>
+                    <div class="cuadrado notext topright azulclass">.</div>
+                </div>
+
+                <div id="creatediv" class="azulclass">
+
+                    <input type="text" placeholder="Nombre de la rutina">
+
+                    <div id="exercises">
+
+
+
+                    </div>
+
+                    <div id="buttons">
+
+                        <button id="addbutton" onclick="AddExercise()" class="importantbutton">+ Ejercicio</button>
+                        <button id="createbutton" class="importantbutton">Crear</button>
+
+                    </div>
+
+                </div>
+
+                <div class="rowflex">
+                    <div class="cuadrado notext bottomleft azulclass">.</div>
+                    <div class="cuadrado notext mid azulclass">.</div>
+                    <div class="cuadrado notext bottomright azulclass">.</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="../js/create.js"></script>
 
     </body>
 
