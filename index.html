@@ -1,94 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
     <head>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="css/roundbox.css">
         <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/reset.css">
-
-        <title>Rutinas</title>
+        <title>Be Clean</title>
 
     </head>
 
+
+
     <body>
 
-        <header>
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#ubicacion">Ubicación</a></li>
+            </ul>
+        </nav>
 
-            <h1>Rutinas</h1>
-            <h2>- Inicio -</h2>
 
+        <!------------ ENCABEZADO DE LA PAGINA ------------>
+
+        <header id="header">
+            <h1 id="header-title">BE CLEAN</h1>
         </header>
 
-        <div id="opciones">
+        <main>
 
-            <div class="opcioninicio">
+            <!------------ SECCION DE INFORMACION ------------>
 
-                <div class="rowflex">
-                    <div class="cuadrado notext topleft azulclass">.</div>
-                    <div class="cuadrado notext mid azulclass">.</div>
-                    <div class="cuadrado notext topright azulclass">.</div>
-                </div>
-                <div class="opcionmain">
-                    <h3>Crear rutina</h3>
-                    <p>Crea una y agrega los ejercicios, series, repeticiones y peso</p>
-                    <a href="html/crear.html">Crear</a>
-                </div>
-                <div class="rowflex">
-                    <div class="cuadrado notext bottomleft azulclass">.</div>
-                    <div class="cuadrado notext mid azulclass">.</div>
-                    <div class="cuadrado notext bottomright azulclass">.</div>
-                </div>
+            <h2 class="main-section-title">INFO</h2>
 
-            </div>
+            <section class="main-section">
 
-            <div class="opcioninicio">
+                <!------- ARTICULO DEL FRENTE ------->
 
-                <div class="rowflex">
-                    <div class="cuadrado notext topleft azulclass">.</div>
-                    <div class="cuadrado notext mid azulclass">.</div>
-                    <div class="cuadrado notext topright azulclass">.</div>
-                </div>
-                <div class="opcionmain">
-                    <h3>Ver rutinas</h3>
-                    <p>Crea una y agrega los ejercicios, series, repeticiones y peso</p>
-                    <a href="html/ver.html">Ver</a>
-                </div>
-                <div class="rowflex">
-                    <div class="cuadrado notext bottomleft azulclass">.</div>
-                    <div class="cuadrado notext mid azulclass">.</div>
-                    <div class="cuadrado notext bottomright azulclass">.</div>
-                </div>
+                <article id="frente" class="main-article">
+                    <header class="article-header">
+                        <h2 class="article-title">Frente</h2>
+                        <button class="article-exit-button">+</button>
+                    </header>
+                    <div class="square-wrapper">
+                        <img class="article-content" src="images/beclean_front_photo.png">
+                    </div>
+                    <p class="article-description">Frente de nuestro local</p>
+                </article>
+    
 
-            </div>
+                <!------- ARTICULO DE LA UBICACION ------->
 
-            <div class="opcioninicio">
+                <article id="ubicacion" class="main-article">
+                    <header class="article-header">
+                        <h2 class="article-title">Ubicación</h2>
+                        <button class="article-exit-button">+</button>
+                    </header>
+                    <div class="square-wrapper">
+                        <iframe class="article-content" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13085.885827562604!2d-57.971182272405755!3d-34.91971126728842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e799f151e713%3A0x809405f1ad300f92!2sBe%20Clean!5e0!3m2!1ses!2sar!4v1724022081230!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p class="article-description">Calle 46 N°992 E/14 y 15</p>
+                </article>
+    
 
-                <div class="rowflex">
-                    <div class="cuadrado notext topleft azulclass">.</div>
-                    <div class="cuadrado notext mid azulclass">.</div>
-                    <div class="cuadrado notext topright azulclass">.</div>
-                </div>
-                <div class="opcionmain">
-                    <h3>Editar</h3>
-                    <p>Crea una y agrega los ejercicios, series, repeticiones y peso</p>
-                    <a href="html/editar.html">Editar</a>
-                </div>
-                <div class="rowflex">
-                    <div class="cuadrado notext bottomleft azulclass">.</div>
-                    <div class="cuadrado notext mid azulclass">.</div>
-                    <div class="cuadrado notext bottomright azulclass">.</div>
-                </div>
+                <!------- ARTICULO DE CONTACTO ------->
 
-            </div>
+                <article id="contacto" class="main-article">
+                    <header class="article-header">
+                        <h2 class="article-title">Contáctanos</h2>
+                        <button class="article-exit-button">+</button>
+                    </header>
+                    <div id="contact-square-wrapper" class="square-wrapper">
+                        <a href="" id="whatsapp" class="contact-way">
+                            <img id="whatsapp-logo" class="contact-logo" src="https://cdn.icon-icons.com/icons2/2972/PNG/512/whatsapp_logo_icon_186881.png">
+                            <span id="whatsapp-text" class="contact-text">+54 221 XXX-XXXX</span>
+                        </a>
+                        <a href="https://www.instagram.com/be_cleanok/" id="instagram" class="contact-way">
+                            <img id="whatsapp-logo" class="contact-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png">
+                            <span id="instagram-text" class="contact-text">@be_cleanok</span>
+                        </a>
+                    </div>
+                    <p class="article-description">Contactanos por nuestros medios!</p>
+                </article>
 
-        </div>
+            </section>
 
-    <script src="js/index.js"></script>
+
+            <!------------ SECCION DE PROMOCIONES ------------>
+
+            <h2 class="main-section-title">PROMOCIONES - AGOSTO</h2>
+
+            <section class="main-section">
+
+
+                <!------- PROMOCION DE EFECTIVO ------->
+    
+                <article id="promocion-efectivo" class="main-article">
+                    <header class="article-header">
+                        <h2 class="article-title">
+                            <span>Efectivo</span>
+                            <span>Todos los dias</span>
+                        </h2>
+                        <button class="article-exit-button">+</button>
+                    </header>
+                    <div class="square-wrapper">
+                        <div id="efectivo" class="promotion">
+                            <img id="promotion-image-efectivo" class="promotion-image" src="https://cdn-icons-png.freepik.com/512/4824/4824224.png">
+                            <span class="promotion-condition">Compra minima $10000</span>
+                            <span class="promotion-dates">TODOS LOS DIAS</span>
+                            <span><span class="promotion-percent">10%</span><span class="promotion-discount">DE AHORRO</span></span>
+                        </div>
+                    </div>
+                    <p class="article-description">
+                        <span>- Promocion efectivo a partir de compras mayores a $10000.</span>
+                    </p>
+                </article>
+
+
+                <!------- PROMOCION DE CUENTA DNI ------->
+
+                <article id="promocion-cdni" class="main-article">
+                    <header class="article-header">
+                        <h2 class="article-title">
+                            <span>Cuenta DNI</span>
+                            <span>Lunes a Viernes</span>
+                        </h2>
+                        <button class="article-exit-button">+</button>
+                    </header>
+                    <div class="square-wrapper">
+                        <div id="cdni" class="promotion">
+                            <div class="promotion-name cdni-title">
+                                <img src="https://play-lh.googleusercontent.com/xOBe-cOnxDgLtVluxsdjgVIfvm-NJbRm4wZ2NeYQbt239WgROMp_yP3riXH4IENFx5xl">
+                                <span class="cdni-title-name">
+                                    <span class="cdni-title-name-A">Cuenta</span>
+                                    <span class="cdni-title-name-B">DNI</span>
+                                </span>
+                            </div>
+                            <span class="promotion-dates">DE LUNES A VIERNES</span>
+                            <span><span class="promotion-percent">20%</span><span class="promotion-discount">DE AHORRO</span></span>
+                            <span class="promotion-refund">Tope de reintegro mensual $6000</span>
+                        </div>
+                    </div>
+                    <p class="article-description">
+                        <span>- Promocion cuenta dni.</span>
+                        <span>- 20% de ahorro con un tope de reintegro de hasta $6000</span>
+                    </p>
+                </article>
+
+
+                <!------- PROMOCION DE CUENTA DNI PARA MAYORES ------->
+
+                <article id="promocion-cdni-mayores" class="main-article">
+                    <header class="article-header">
+                        <h2 class="article-title">
+                            <span>Cuenta DNI - Mayores</span>
+                            <span>Lunes a Viernes</span>
+                        </h2>
+                        <button class="article-exit-button">+</button>
+                    </header>
+                    <div class="square-wrapper">
+                        <div id="cdni-mayores" class="promotion">
+                            <div class="promotion-name cdni-title">
+                                <img src="https://play-lh.googleusercontent.com/xOBe-cOnxDgLtVluxsdjgVIfvm-NJbRm4wZ2NeYQbt239WgROMp_yP3riXH4IENFx5xl">
+                                <span class="cdni-title-name">
+                                    <span class="cdni-title-name-A">Cuenta</span>
+                                    <span class="cdni-title-name-B">DNI</span>
+                                </span>
+                            </div>
+                            <span class="promotion-condition">Mayores de 60 años</span>
+                            <span class="promotion-dates">DE LUNES A VIERNES</span>
+                            <span><span class="promotion-percent">30%</span><span class="promotion-discount">DE AHORRO</span></span>
+                            <span class="promotion-refund">Tope de reintegro mensual $7000</span>
+                        </div>
+                    </div>
+                    <p class="article-description">
+                        <span>- Promocion cuenta dni solo para mayores de 60 años.</span>
+                        <span>- 20% de ahorro con un tope de reintegro de hasta $7000.</span>
+                    </p>
+                </article>
+
+
+                <!------- PROMOCION DE GALICIA ------->
+
+                <article id="promocion-galicia" class="main-article">
+                    <header class="article-header">
+                        <h2 class="article-title">
+                            <span>Galicia Nave</span>
+                            <span>Todos los martes</span>
+                        </h2>
+                        <button class="article-exit-button">+</button>
+                    </header>
+                    <div class="square-wrapper">
+                        <div id="galicia" class="promotion">
+                            <div class="promotion-name galicia-title">
+                                <span class="galicia-title-name">
+                                    <img src="https://s3-symbol-logo.tradingview.com/gpo-fin-galicia--600.png">
+                                    <span class="galicia-title-name-A">Galicia</span>
+                                </span>
+                                <img src="https://www.navenegocios.com/static/logo.svg">
+                            </div>
+                            <span class="promotion-dates">TODOS LOS MARTES</span>
+                            <span><span class="promotion-percent">30%</span><span class="promotion-discount">DE AHORRO</span></span>
+                            <span class="promotion-refund">Tope de reintegro mensual $5000</span>
+                        </div>
+                    </div>
+                    <p class="article-description">
+                        <span>- Promocion Galicia Nave.</span>
+                        <span>- 30% de ahorro con un tope de reintegro de hasta $5000.</span>
+                    </p>
+                </article>
+
+
+                <!------- PROMOCION SUPER PROMO ------->
+
+                <article id="promocion-superpromo" class="main-article">
+                    <header class="article-header">
+                        <h2 class="article-title">
+                            <span>Todos los medios</span>
+                            <span>Todos los miercoles</span>
+                        </h2>
+                        <button class="article-exit-button">+</button>
+                    </header>
+                    <div class="square-wrapper">
+                        <div id="superpromo" class="promotion">
+                            <div class="promotion-name superpromo-title">
+                                <span class="superpromo-title-name">SUPER</span>
+                                <span class="superpromo-title-name">PROMO</span>
+                            </div>
+                            <span class="promotion-condition">Compra minima $15000</span>
+                            <span class="promotion-dates">TODOS LOS MIERCOLES</span>
+                            <span><span class="promotion-percent">30%</span><span class="promotion-discount">DE AHORRO</span></span>
+                            <span class="promotion-refund">Cualquier medio de pago</span>
+                        </div>
+                    </div>
+                    <p class="article-description">
+                        <span>- Promocion para cualquier medio de pago.</span>
+                        <span>- 30% de ahorro con un minimo de compra de $15000.</span>
+                    </p>
+                </article>
+
+            </section>
+
+        </main>
 
     </body>
 
