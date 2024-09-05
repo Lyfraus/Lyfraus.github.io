@@ -99,6 +99,43 @@ h1{
     background-color: #646464;
 }
 
+@media(max-width:450px){
+    h1{
+        font-weight: 400;
+        font-size: 5.7em;
+        line-height: .9em;
+        word-spacing: -.15em;
+    }
+
+    #board{
+        width: 270px;
+        height: 270px;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+    
+    .piece{
+        width: 90px;
+        height: 90px;
+        font-weight: 400;
+        font-size: 5em;
+        line-height: 75px;
+    }
+    
+    #actual-piece{
+        padding: 10px 10px;
+        min-width: 100px;
+        min-height: 100px;
+        font-weight: 400;
+        font-size: 5em;
+        line-height: .8em;
+    }
+    
+    .mini{
+        font-size: 2.4em !important;
+    }
+}
+
 #c0r0{
     border-width: 0 5px 5px 0;
     border-top-left-radius: 30px;
