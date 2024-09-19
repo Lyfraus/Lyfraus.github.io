@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Mega TaTeTi</title>
+
+    </head>
+
+    <body>
+        
+        <h1><span class="orangeText">Mega</span> <span class="whiteText">TaTeTi</span></h1>
+
+        <div id="board">
+            <div class="game topleft" id="topleft">
+                <p class="piece clickeable topleft" id="topleft0"></p>
+                <p class="piece clickeable top" id="topleft1"></p>
+                <p class="piece clickeable topright" id="topleft2"></p>
+                <p class="piece clickeable left" id="topleft3"></p>
+                <p class="piece clickeable middle" id="topleft4"></p>
+                <p class="piece clickeable right" id="topleft5"></p>
+                <p class="piece clickeable bottomleft" id="topleft6"></p>
+                <p class="piece clickeable bottom" id="topleft7"></p>
+                <p class="piece clickeable bottomright" id="topleft8"></p>
+            </div>
+            <div class="game top" id="top">
+                <p class="piece clickeable topleft" id="top0"></p>
+                <p class="piece clickeable top" id="top1"></p>
+                <p class="piece clickeable topright" id="top2"></p>
+                <p class="piece clickeable left" id="top3"></p>
+                <p class="piece clickeable middle" id="top4"></p>
+                <p class="piece clickeable right" id="top5"></p>
+                <p class="piece clickeable bottomleft" id="top6"></p>
+                <p class="piece clickeable bottom" id="top7"></p>
+                <p class="piece clickeable bottomright" id="top8"></p>
+            </div>
+            <div class="game topright" id="topright">
+                <p class="piece clickeable topleft" id="topright0"></p>
+                <p class="piece clickeable top" id="topright1"></p>
+                <p class="piece clickeable topright" id="topright2"></p>
+                <p class="piece clickeable left" id="topright3"></p>
+                <p class="piece clickeable middle" id="topright4"></p>
+                <p class="piece clickeable right" id="topright5"></p>
+                <p class="piece clickeable bottomleft" id="topright6"></p>
+                <p class="piece clickeable bottom" id="topright7"></p>
+                <p class="piece clickeable bottomright" id="topright8"></p>
+            </div>
+            <div class="game left" id="left">
+                <p class="piece clickeable topleft" id="left0"></p>
+                <p class="piece clickeable top" id="left1"></p>
+                <p class="piece clickeable topright" id="left2"></p>
+                <p class="piece clickeable left" id="left3"></p>
+                <p class="piece clickeable middle" id="left4"></p>
+                <p class="piece clickeable right" id="left5"></p>
+                <p class="piece clickeable bottomleft" id="left6"></p>
+                <p class="piece clickeable bottom" id="left7"></p>
+                <p class="piece clickeable bottomright" id="left8"></p>
+            </div>
+            <div class="game middle" id="middle">
+                <p class="piece clickeable topleft" id="middle0"></p>
+                <p class="piece clickeable top" id="middle1"></p>
+                <p class="piece clickeable topright" id="middle2"></p>
+                <p class="piece clickeable left" id="middle3"></p>
+                <p class="piece clickeable middle" id="middle4"></p>
+                <p class="piece clickeable right" id="middle5"></p>
+                <p class="piece clickeable bottomleft" id="middle6"></p>
+                <p class="piece clickeable bottom" id="middle7"></p>
+                <p class="piece clickeable bottomright" id="middle8"></p>
+            </div>
+            <div class="game right" id="right">
+                <p class="piece clickeable topleft" id="right0"></p>
+                <p class="piece clickeable top" id="right1"></p>
+                <p class="piece clickeable topright" id="right2"></p>
+                <p class="piece clickeable left" id="right3"></p>
+                <p class="piece clickeable middle" id="right4"></p>
+                <p class="piece clickeable right" id="right5"></p>
+                <p class="piece clickeable bottomleft" id="right6"></p>
+                <p class="piece clickeable bottom" id="right7"></p>
+                <p class="piece clickeable bottomright" id="right8"></p>
+            </div>
+            <div class="game bottomleft" id="bottomleft">
+                <p class="piece clickeable topleft" id="bottomleft0"></p>
+                <p class="piece clickeable top" id="bottomleft1"></p>
+                <p class="piece clickeable topright" id="bottomleft2"></p>
+                <p class="piece clickeable left" id="bottomleft3"></p>
+                <p class="piece clickeable middle" id="bottomleft4"></p>
+                <p class="piece clickeable right" id="bottomleft5"></p>
+                <p class="piece clickeable bottomleft" id="bottomleft6"></p>
+                <p class="piece clickeable bottom" id="bottomleft7"></p>
+                <p class="piece clickeable bottomright" id="bottomleft8"></p>
+            </div>
+            <div class="game bottom" id="bottom">
+                <p class="piece clickeable topleft" id="bottom0"></p>
+                <p class="piece clickeable top" id="bottom1"></p>
+                <p class="piece clickeable topright" id="bottom2"></p>
+                <p class="piece clickeable left" id="bottom3"></p>
+                <p class="piece clickeable middle" id="bottom4"></p>
+                <p class="piece clickeable right" id="bottom5"></p>
+                <p class="piece clickeable bottomleft" id="bottom6"></p>
+                <p class="piece clickeable bottom" id="bottom7"></p>
+                <p class="piece clickeable bottomright" id="bottom8"></p>
+            </div>
+            <div class="game bottomright" id="bottomright">
+                <p class="piece clickeable topleft" id="bottomright0"></p>
+                <p class="piece clickeable top" id="bottomright1"></p>
+                <p class="piece clickeable topright" id="bottomright2"></p>
+                <p class="piece clickeable left" id="bottomright3"></p>
+                <p class="piece clickeable middle" id="bottomright4"></p>
+                <p class="piece clickeable right" id="bottomright5"></p>
+                <p class="piece clickeable bottomleft" id="bottomright6"></p>
+                <p class="piece clickeable bottom" id="bottomright7"></p>
+                <p class="piece clickeable bottomright" id="bottomright8"></p>
+            </div> 
+        </div>
+
+        <div id="actual-piece">
+            <p id="actual-piecetopleft" class="actual-piece topleft"></p>
+            <p id="actual-piecetop" class="actual-piece top"></p>
+            <p id="actual-piecetopright" class="actual-piece topright"></p>
+            <p id="actual-pieceleft" class="actual-piece left"></p>
+            <p id="actual-piecemiddle" class="actual-piece middle"></p>
+            <p id="actual-pieceright" class="actual-piece right"></p>
+            <p id="actual-piecebottomleft" class="actual-piece bottomleft"></p>
+            <p id="actual-piecebottom" class="actual-piece bottom"></p>
+            <p id="actual-piecebottomright" class="actual-piece bottomright"></p>
+        </div>
+        
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
