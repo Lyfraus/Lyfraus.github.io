@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+@media(max-width: 500px){
+    header h1{
+        font-size: 1.8em !important;
+    }
+    header ul{
+        gap: 3px !important;
+        font-size: .8em !important;
+    }
+    header img{
+        width: 90px !important;
+    }
+}
+
+@media(max-width: 700px) and (min-width:500px){
+    header h1{
+        font-size: 2.5em !important;
+    }
+}
+
 header{
     background-color: #041B45;
 }
@@ -17,7 +36,7 @@ header img{
 
 header h1{
     color: #FBF6F0;
-    text-align: center;
+    text-align: left;
     font-family: "Mulish", sans-serif;
     font-weight: 800;
     font-size: 4em;
