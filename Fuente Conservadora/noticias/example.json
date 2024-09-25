@@ -1,0 +1,29 @@
+[
+    {
+        "type":"h2",
+        "content":""
+    },
+    {
+        "type":"row",
+        "content":[
+            {
+                "type":"img",
+                "src":"",
+                "caption":"Image"
+            },
+            {
+                "type":"column",
+                "content":[
+                    {
+                        "type":"p",
+                        "content":""
+                    },
+                    {
+                        "type":"p",
+                        "content":""
+                    }
+                ]
+            }
+        ]
+    }
+]

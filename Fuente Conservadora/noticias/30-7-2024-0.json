@@ -1,0 +1,58 @@
+[
+    {
+        "type":"h2",
+        "content":"LOS NÚMEROS QUE MADURO QUIERE OCULTAR"
+    },
+    {
+        "type":"row",
+        "content":[
+            {
+                "type":"img",
+                "src":"https://es.theepochtimes.com/assets/uploads/2019/07/maduro-1200x864-795x447.jpg",
+                "caption":"Image"
+            },
+            {
+                "type":"column",
+                "content":[
+                    {
+                        "type":"p",
+                        "content":"A continuación te mostramos los números en desapariciones, torturas, asesinatos e incluso emigraciones de venezolanos que escaparon de su propio país por culpa de la dictadura de Nicolas Maduro, quien asumió hace poco más de 10 años:"
+                    },
+                    {
+                        "type":"ul",
+                        "content":[
+                            {
+                                "type":"li",
+                                "content":"- Desaparecidos: Más de 800 actualmente"
+                            },
+                            {
+                                "type":"li",
+                                "content":"- Asesinatos: Más de 10.000"
+                            },
+                            {
+                                "type":"li",
+                                "content":"- Presos políticos: Más de 16.000"
+                            },
+                            {
+                                "type":"li",
+                                "content":"- Víctimas por tortura: Más de 40.000"
+                            },
+                            {
+                                "type":"li",
+                                "content":"- Emigraciones: Más de 7.800.000"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type":"p",
+        "content":"En poco más de 10 años de dictadura, Nicolas Maduro se ha cargado el futuro de millones de venezolanos pisándoles las cabezas e ignorando, una vez más, la bendita voluntad popular."
+    },
+    {
+        "type":"font",
+        "content":"Datos: ONU y PROVEA."
+    }
+]

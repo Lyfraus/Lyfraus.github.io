@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+footer{
+    background-color: #041B45;
+}
+
+
+footer nav{
+    background-color: #020e24;
+    width: 100%;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+footer img{
+    width: 60%;
+    height: 60%;
+    object-fit:cover;
+    filter: invert(1);
+    margin: 20%;
+}
+
+footer .logo-border{
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+    border: 3px solid #13213b;
+    box-shadow: 0px 0px 10px rgba(242, 241, 255, 0.884);
+    border-radius: 50%;
+}
+
+footer li:hover img{
+    filter: invert(0);
+}
+
+footer a{
+    color: #FBF6F0;
+    text-align: center;
+    width: 100%;
+}
+
+footer li{
+    padding: 5px;
+    cursor: pointer;
+}
+
+footer li:hover{
+    padding: 5px;
+    color: #020e24;
+    background-color: #FBF6F0;
+    border-radius: 0 0 5px 5px ;
+}
+
+footer li:hover a{
+    color: #020e24;
+}
+
+#mail-logo img{
+    width: 100%;
+    margin: 20% 0;
+}

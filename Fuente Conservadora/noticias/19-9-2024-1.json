@@ -1,0 +1,29 @@
+[
+    {
+        "type":"h2",
+        "content":"LUEGO DE LOS PAROS Y PIQUETES"
+    },
+    {
+        "type":"column",
+        "content":[
+            {
+                "type":"p",
+                "content":"Adorni confirmó que el Gobierno Nacional ya comenzó a negociar con aerolíneas privadas de latinoamérica para finalmente privatizar Aerolíneas Argentinas. Este proceso busca encontrar un comprador para la aerolínea estatal, con el objetivo de reducir el gasto público y mejorar la eficiencia en el sector"
+            },
+            {
+                "type":"row",
+                "content":[
+                    {
+                        "type":"img",
+                        "src":"https://mf.b37mrtl.ru/actualidad/public_images/2024.08/article/66b631fd59bf5b5d5445241f.jpg",
+                        "caption":"Image"
+                    },
+                    {
+                        "type":"p",
+                        "content":"“En virtud de los persistentes paros convocados por el gremio que conduce el secretario general de la Asociación de Pilotos de Líneas Aéreas (APLA), Pablo Biró y compañía, que afectaron a cerca de 40.000 pasajeros, el Gobierno Nacional ha iniciado conversaciones con varias empresas privadas latinoamericanas para que se hagan cargo finalmente de la operación de Aerolíneas Argentinas” comentó el Vocero Presidencial."
+                    }
+                ]
+            }
+        ]
+    }
+]

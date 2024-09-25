@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+header{
+    background-color: #041B45;
+}
+
+header div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{
+    width: 120px;
+}
+
+header h1{
+    color: #FBF6F0;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-weight: 800;
+    font-size: 4em;
+    padding: 10px;
+}
+
+header nav{
+    background-color: #020e24;
+    width: 100%;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+#topics-nav{
+    background-color: #e7e7fd;
+}
+
+#topics-list{
+    overflow: scroll;
+    justify-content: left;
+}
+
+#topics-list::before{
+    content: "";
+    flex: 1;
+}
+
+#topics-list::after{
+    content: "";
+    flex: 1;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+header a{
+    color: #FBF6F0;
+    text-align: center;
+    width: 100%;
+}
+
+header .topic{
+    padding: 5px;
+    color: #020e24;
+    background-color: #e7e7fd;
+}
+
+header .topic:hover,header .topic.selected{
+    color: #FBF6F0;
+    background-color: #020e24;
+    border-radius: 0 0 5px 5px;
+}
+
+
+
+header li{
+    padding: 5px;
+    color: #FBF6F0;
+    cursor: pointer;
+}
+
+header li:hover{
+    padding: 5px;
+    color: #020e24;
+    background-color: #e7e7fd;
+    border-radius: 5px 5px 0 0;
+}
+
+header li:hover a{
+    color: #020e24;
+}
