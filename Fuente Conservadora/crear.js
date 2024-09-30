@@ -266,6 +266,8 @@ createButton.addEventListener("click",()=>{
             <section id="noticia">
                 ${document.getElementById("noticia").innerHTML}
             </section>
+            
+            <button id="share">Compartir ➥</button>
 
         </main>
 
