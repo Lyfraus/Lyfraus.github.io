@@ -1,0 +1,70 @@
+
+
+#controls{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+#controls button, .add-btn, select, input, textarea{
+    width: 150px;
+    height: 50px;
+    max-width: 150px;
+    min-width: 50px;
+}
+
+.check-button, .remove-button{
+    height: 50px;
+    width: 50px;
+}
+
+.check-button{
+    background-color: rgb(99, 204, 99);
+}
+
+.remove-button{
+    background-color: rgb(204, 99, 99);
+}
+
+#preview{
+    background-color: rgb(204, 197, 99);
+}
+
+#create{
+    background-color: rgb(99, 204, 204);
+}
+
+#reset{
+    background-color: rgb(204, 99, 195);
+}
+
+.not-checked{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+#noticia{
+    margin: 20px auto;
+}
+
+#html-text{
+    background-color: rgb(59, 59, 59);
+    width: 95%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    color: rgb(228, 228, 228);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: .9em;
+    border-radius: 5px;
+    border: 5px solid rgb(29, 29, 29);
+}

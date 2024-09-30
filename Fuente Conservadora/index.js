@@ -1,6 +1,5 @@
 let noticias;
 const noticiasElement = document.getElementById("noticias");
-const noticiaElement = document.getElementById("noticia");
 let noticiasPage = 0;
 const noticiasPageElement = document.getElementById("page-number");
 const noticiasMinusPageElement = document.getElementById("minus-page-number");
@@ -51,10 +50,12 @@ const cargarNoticias = ()=>{
     for(const noticia of noticiasToDisplay){
         stringElement += `
             <article id="${noticia["id"]}" class="noticia">
-                <img src="${noticia["image-link"]}">
-                <p>| ${noticia["topic"]}</p>
-                <h2>${noticia["title"]}</h2>
-                <span>~ ${noticia["date"]}</span>
+                <a href="noticias/${noticia["id"] + ".html"}" target="_blank">
+                    <img src="${noticia["image-link"]}">
+                    <p>| ${noticia["topic"]}</p>
+                    <h2>${noticia["title"]}</h2>
+                    <span>~ ${noticia["date"]}</span>
+                </a>
             </article>
         `;
     }
@@ -101,29 +102,9 @@ const elementToString = (el,isSubRow = false,isSubColumn = false)=>{
     return theString;
 };
 
-const cargarNoticia = (id)=>{
-    fetch(`noticias/${id}.json`)
-        .then(response => response.json())
-        .then(data => {
-            noticia = data;
-            let stringElement = ``;
-            for(const elemento of noticia){
-                stringElement += elementToString(elemento);
-            }
-            noticiaElement.innerHTML = stringElement;
-        })
-        .catch(error => {
-            console.error('Error al cargar el archivo JSON:', error);
-  });
-}
 
-noticiasElement.addEventListener("click",(e)=>{
-    const clickedElement = e.target.nodeName === "ARTICLE" ? e.target : e.target.parentElement;
-    if (clickedElement.nodeName === "ARTICLE"){
-        borrarNoticias();
-        cargarNoticia(clickedElement.id);
-    }
-});
+
+
 
 const noticiasButton = document.getElementById("noticias-button");
 
@@ -137,7 +118,6 @@ noticiasButton.addEventListener("click",()=>{
         
         actualTopicElement = null;
     }
-    noticiaElement.innerHTML = "";
     cargarNoticias();
 });
 
@@ -155,7 +135,6 @@ topicsNavElement.addEventListener("click",(e)=>{
     noticiasDisplayables = noticias.filter((not)=>e.target.id === not.topic);
     noticiasPage = 0;
     noticiasPageElement.textContent = noticiasPage +1;
-    noticiaElement.innerHTML = "";
     cargarNoticias();
 });
 
@@ -165,7 +144,6 @@ noticiasMinusPageElement.addEventListener("click",()=>{
     }
     noticiasPage -= 1;
     noticiasPageElement.textContent = noticiasPage+1;
-    noticiaElement.innerHTML = "";
     cargarNoticias();
 });
 
@@ -177,6 +155,5 @@ noticiasPlusPageElement.addEventListener("click",()=>{
     }
     noticiasPage += 1;
     noticiasPageElement.textContent = noticiasPage+1;
-    noticiaElement.innerHTML = "";
     cargarNoticias();
 });
