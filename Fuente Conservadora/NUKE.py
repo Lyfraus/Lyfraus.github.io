@@ -62,10 +62,10 @@ def generate_html_for_news(news_id):
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/base.css">
-    <link rel="stylesheet" href="../styles/noticia.css"> 
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="stylesheet" href="../../styles/noticia.css"> 
     <title>Fuente Conservadora - Noticia</title> 
 
 </head>
@@ -75,13 +75,13 @@ def generate_html_for_news(news_id):
     <header>
 
         <div>
-            <img src="../images/logo.png"><h1>FUENTE CONSERVADORA</h1>
+            <img src="../../images/logo.png"><h1>FUENTE CONSERVADORA</h1>
         </div>
 
         <nav>
             <ul>
-                <li id="noticias-button">Noticias</li>
-                <li><a href="dolar.html">Dolar</a></li>
+                <li id="noticias-button"><a href="../../index.html">Noticias</a></li>
+                <li><a href="../../dolar.html">Dolar</a></li>
                 <li><a href="#redes-nav">Redes</a></li>
             </ul>
         </nav>
@@ -105,6 +105,8 @@ def generate_html_for_news(news_id):
     html_content += '''
         </section>
 
+        <button id="share">Compartir ➥</button>
+
     </main>
 
     <footer>
@@ -117,7 +119,7 @@ def generate_html_for_news(news_id):
         </nav>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="../../noticia.js"></script>
 
 </body>
 
@@ -125,7 +127,7 @@ def generate_html_for_news(news_id):
     '''
 
     # Write HTML content to file
-    output_file = f'noticias/{news_id}.html'
+    output_file = f'noticias/htmls/{news_id}.html'
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(html_content)
 
