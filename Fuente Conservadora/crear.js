@@ -181,7 +181,7 @@ resetButton.addEventListener("click", resetCreation);
 
 resetCreation();
 
-let isPreview = false;
+let isPreview = true;
 
 const previewButton = document.getElementById("preview");
 
