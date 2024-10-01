@@ -403,9 +403,9 @@ createButton.addEventListener("click",()=>{
     <body>
 
         <header>
-
+      
             <div>
-                <img src="../../images/logo.png"><h1>FUENTE CONSERVADORA</h1>
+                <a class="linkedImage" href="../../index.html"><img src="../../images/logo.png"></a><h1>FUENTE CONSERVADORA</h1></a><h1>FUENTE CONSERVADORA</h1>
             </div>
 
             <nav>
