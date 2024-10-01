@@ -23,3 +23,6 @@ shareButton.addEventListener("click",()=>{
         .catch(error => console.log("Error sharing", error));
 });
 
+const firstParagraph = document.querySelector("#noticia p");
+firstParagraph.classList.add("first-paragraph");
+

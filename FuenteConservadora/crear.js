@@ -1,24 +1,25 @@
 
 
 
-const addSelectElement = (element)=>{
-    element.innerHTML += `
-        <div class="selection-div not-checked">
+const selectElement = `
+        <div class="selection-div">
             <select class="selection">
                 <option>Titulo</option>
                 <option>Parrafo</option>
+                <option>Fuente</option>
+                <option>Cita</option>
                 <option>Imagen</option>
                 <option>Fila</option>
                 <option>Columna</option>
-                <option>Fuente</option>
+                <option>Lista</option>
+                <option>Elemento de lista</option>
             </select>
             <button class="add-btn" onclick="createSelection(this)">Agregar</button>
         </div>
     `;
-};
 
 const removeSelection = (btnElement)=>{
-    btnElement.parentElement.remove();
+    btnElement.parentElement.parentElement.remove();
 };
 
 const addSubClass = (upperElement)=>{
@@ -26,22 +27,30 @@ const addSubClass = (upperElement)=>{
 };
 
 const checkSelection = (btnElement)=>{
-    const pElement = btnElement.parentElement;
+    const pElement = btnElement.parentElement.parentElement;
     const elementType = pElement.querySelector(".element-type").textContent;
-    console.log(elementType);
     let element;
-    if (!["img","font","row","column"].includes(elementType)){
+    if (!["img","font","row","column","ul","quote"].includes(elementType)){
+        if(!pElement.querySelector("textarea").value.replace(" ","")){
+            return;
+        }
         element = document.createElement(elementType);
         if (pElement.parentElement.classList.length !== 0){
             if(addSubClass(pElement.parentElement)){
                 element.classList.add(addSubClass(pElement.parentElement));
             }
         }
+        if (pElement.querySelector(".buttons").querySelector(".box-type").checked){
+            element.classList.add("boxed");
+        }
         element.textContent = pElement.querySelector("textarea").value;
 
     } else {
         switch(elementType){
             case "img":
+                if(!pElement.querySelector(".image-link").value.replace(" ","")){
+                    return;
+                }
                 element = document.createElement("div");
                 element.classList.add("imageWithCaption");
                 if (pElement.parentElement.classList.length !== 0){
@@ -49,10 +58,16 @@ const checkSelection = (btnElement)=>{
                         element.classList.add(addSubClass(pElement.parentElement));
                     }
                 }
-                element.innerHTML = `<img src="${pElement.querySelector(".image-link").value}"/> ~ ${btnElement.parentElement.querySelector(".image-caption").value}`;
+                if (pElement.querySelector(".box-type").checked){
+                    element.classList.add("boxed");
+                }
+                element.innerHTML = `<img src="${pElement.querySelector(".image-link").value}"/> ~ ${pElement.querySelector(".image-caption").value}`;
                 break;
 
             case "row":
+                if(!pElement.querySelector(".row-content").innerHTML.replace(" ","")){
+                    return;
+                }
                 element = document.createElement("div");
                 element.classList.add("row");
                 if (pElement.parentElement.classList.length !== 0){
@@ -60,10 +75,16 @@ const checkSelection = (btnElement)=>{
                         element.classList.add(addSubClass(pElement.parentElement));
                     }
                 }
+                if (pElement.querySelector(".box-type").checked){
+                    element.classList.add("boxed");
+                }
                 element.innerHTML = pElement.querySelector(".row-content").innerHTML;
                 break;
 
             case "column":
+                if(!pElement.querySelector(".column-content").innerHTML.replace(" ","")){
+                    return;
+                }
                 element = document.createElement("div");
                 element.classList.add("column");
                 if (pElement.parentElement.classList.length !== 0){
@@ -71,16 +92,61 @@ const checkSelection = (btnElement)=>{
                         element.classList.add(addSubClass(pElement.parentElement));
                     }
                 }
+                if (pElement.querySelector(".box-type").checked){
+                    element.classList.add("boxed");
+                }
                 element.innerHTML = pElement.querySelector(".column-content").innerHTML;
                 break;
+            
+            case "ul":
+                if(!pElement.querySelector(".list-content").innerHTML.replace(" ","")){
+                    return;
+                }
+                element = document.createElement("ul");
+                element.classList.add("list");
+                if (pElement.parentElement.classList.length !== 0){
+                    if(addSubClass(pElement.parentElement)){
+                        element.classList.add(addSubClass(pElement.parentElement));
+                    }
+                }
+                if (pElement.querySelector(".box-type").checked){
+                    element.classList.add("boxed");
+                }
+                element.innerHTML = pElement.querySelector(".list-content").innerHTML;
+                break;
+
+            
 
             case "font":
+                if(!pElement.querySelector("textarea").value.replace(" ","")){
+                    return;
+                }
                 element = document.createElement("span");
                 element.classList.add("font");
                 if (pElement.parentElement.classList.length !== 0){
                     if(addSubClass(pElement.parentElement)){
                         element.classList.add(addSubClass(pElement.parentElement));
                     }
+                }
+                if (pElement.querySelector(".box-type").checked){
+                    element.classList.add("boxed");
+                }
+                element.textContent = pElement.querySelector("textarea").value;
+                break;
+            
+            case "quote":
+                if(!pElement.querySelector("textarea").value.replace(" ","")){
+                    return;
+                }
+                element = document.createElement("span");
+                element.classList.add("quote");
+                if (pElement.parentElement.classList.length !== 0){
+                    if(addSubClass(pElement.parentElement)){
+                        element.classList.add(addSubClass(pElement.parentElement));
+                    }
+                }
+                if (pElement.querySelector(".box-type").checked){
+                    element.classList.add("boxed");
                 }
                 element.textContent = pElement.querySelector("textarea").value;
                 break;
@@ -92,8 +158,9 @@ const checkSelection = (btnElement)=>{
 
 const createSelection = (btnElement)=>{
     const elementPlace = btnElement.parentElement.parentElement;
-    const selection = btnElement.parentElement.querySelector(".selection").value;
-    removeSelection(btnElement);
+    const selection = btnElement.parentElement.querySelector("select").value;
+    const elementToRemove = btnElement.parentElement;
+    elementToRemove.remove();
     switch(selection){
         case "Imagen":
             elementPlace.innerHTML += `
@@ -101,68 +168,129 @@ const createSelection = (btnElement)=>{
                     <span class="element-type" style="display:none;">img</span>
                     <input class="image-link" type="text" placeholder="Link de la imagen"/>
                     <input class="image-caption" type="text" placeholder="Leyenda de la imagen"/>
-                    <button class="check-button" onclick="checkSelection(this)">✓</button>
-                    <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    <div class="buttons">
+                        <input class="box-type" type="checkbox"/>
+                        <button class="check-button" onclick="checkSelection(this)">✓</button>
+                        <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    </div>
                 </div>
             `;
-            addSelectElement(elementPlace);
+            elementPlace.innerHTML += selectElement;
         break;
         case "Fila":
             elementPlace.innerHTML += `
                 <div class="row not-checked">
                     <span class="element-type" style="display:none;">row</span>
                     <div class="row-content"></div>
-                    <button class="check-button" onclick="checkSelection(this)">✓</button>
-                    <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    <div class="buttons">
+                        <input class="box-type" type="checkbox"/>
+                        <button class="check-button" onclick="checkSelection(this)">✓</button>
+                        <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    </div>
                 </div>
             `;
-            addSelectElement(elementPlace.querySelector(".row-content"));
-            addSelectElement(elementPlace);
+            elementPlace.querySelector(".row-content").innerHTML += selectElement;
+            elementPlace.innerHTML += selectElement;
         break;
-        case "Column":
+        case "Columna":
             elementPlace.innerHTML += `
                 <div class="column not-checked">
                     <span class="element-type" style="display:none;">column</span>
                     <div class="column-content"></div>
-                    <button class="check-button" onclick="checkSelection(this)">✓</button>
-                    <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    <div class="buttons">
+                        <input class="box-type" type="checkbox"/>
+                        <button class="check-button" onclick="checkSelection(this)">✓</button>
+                        <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    </div>
                 </div>
             `;
-            addSelectElement(elementPlace.querySelector(".column-content"));
-            addSelectElement(elementPlace);
+            elementPlace.querySelector(".column-content").innerHTML += selectElement;
+            elementPlace.innerHTML += selectElement;
+        break;
+        case "Lista":
+            elementPlace.innerHTML += `
+                <div class="list not-checked">
+                    <span class="element-type" style="display:none;">ul</span>
+                    <div class="list-content"></div>
+                    <div class="buttons">
+                        <input class="box-type" type="checkbox"/>
+                        <button class="check-button" onclick="checkSelection(this)">✓</button>
+                        <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    </div>
+                </div>
+            `;
+            elementPlace.querySelector(".list-content").innerHTML += selectElement;
+            elementPlace.innerHTML += selectElement;
         break;
         case "Parrafo":
             elementPlace.innerHTML += `
                 <div class="not-checked">
                     <span class="element-type" style="display:none;">p</span>
                     <textarea></textarea>
-                    <button class="check-button" onclick="checkSelection(this)">✓</button>
-                    <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    <div class="buttons">
+                        <input class="box-type" type="checkbox"/>
+                        <button class="check-button" onclick="checkSelection(this)">✓</button>
+                        <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    </div>
                 </div>
             `;
-            addSelectElement(elementPlace);
+            elementPlace.innerHTML += selectElement;
+        break;
+        case "Elemento de lista":
+            elementPlace.innerHTML += `
+                <div class="not-checked">
+                    <span class="element-type" style="display:none;">li</span>
+                    <textarea></textarea>
+                    <div class="buttons">
+                        <input class="box-type" type="checkbox"/>
+                        <button class="check-button" onclick="checkSelection(this)">✓</button>
+                        <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    </div>
+                </div>
+            `;
+            elementPlace.innerHTML += selectElement;
         break;
         case "Titulo":
             elementPlace.innerHTML += `
                 <div class="not-checked">
                     <span class="element-type" style="display:none;">h2</span>
                     <textarea></textarea>
-                    <button class="check-button" onclick="checkSelection(this)">✓</button>
-                    <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    <div class="buttons">
+                        <input class="box-type" type="checkbox"/>
+                        <button class="check-button" onclick="checkSelection(this)">✓</button>
+                        <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    </div>
                 </div>
             `;
-            addSelectElement(elementPlace);
+            elementPlace.innerHTML += selectElement;
+        break;
+        case "Cita":
+            elementPlace.innerHTML += `
+                <div class="not-checked">
+                    <span class="element-type" style="display:none;">quote</span>
+                    <textarea></textarea>
+                    <div class="buttons">
+                        <input class="box-type" type="checkbox"/>
+                        <button class="check-button" onclick="checkSelection(this)">✓</button>
+                        <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    </div>
+                </div>
+            `;
+            elementPlace.innerHTML += selectElement;
         break;
         case "Fuente":
             elementPlace.innerHTML += `
                 <div class="not-checked">
                     <span class="element-type" style="display:none;">font</span>
                     <textarea></textarea>
-                    <button class="check-button" onclick="checkSelection(this)">✓</button>
-                    <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    <div class="buttons">
+                        <input class="box-type" type="checkbox"/>
+                        <button class="check-button" onclick="checkSelection(this)">✓</button>
+                        <button class="remove-button" onclick="removeSelection(this)">✗</button>
+                    </div>
                 </div>
             `;
-            addSelectElement(elementPlace);
+            elementPlace.innerHTML += selectElement;
         break;
     }
 };
@@ -171,7 +299,7 @@ const noticiaElement = document.getElementById("noticia");
 
 const resetCreation = ()=>{
     noticiaElement.innerHTML = "";
-    addSelectElement(noticiaElement);
+    noticiaElement.innerHTML += selectElement;
 
 };
 
@@ -181,21 +309,28 @@ resetButton.addEventListener("click", resetCreation);
 
 resetCreation();
 
-let isPreview = true;
+let isPreview = false;
 
 const previewButton = document.getElementById("preview");
 
 previewButton.addEventListener("click",()=>{
+    const notCheckedArray = [...document.querySelectorAll(".not-checked,.selection-div")];
+    const blueBordersArray = [...document.querySelectorAll(".row:not(.boxed),.column:not(.boxed),#noticia p:not(.boxed),#noticia h2:not(.boxed),#noticia span:not(.boxed)")];
+    console.log(blueBordersArray);   
     if(isPreview){
-        const notCheckedArray = [...document.getElementsByClassName("not-checked")];
         for(const notChecked of notCheckedArray){
             notChecked.style.display = "";
         }
+        for(const blueBorder of blueBordersArray){
+            blueBorder.style.borderColor = "blue";
+        }
         isPreview = !isPreview;
     } else {
-        const notCheckedArray = [...document.getElementsByClassName("not-checked")];
         for(const notChecked of notCheckedArray){
             notChecked.style.display = "none";
+        }
+        for(const blueBorder of blueBordersArray){
+            blueBorder.style.borderColor = "transparent";
         }
         isPreview = !isPreview;
     }
@@ -204,6 +339,9 @@ previewButton.addEventListener("click",()=>{
 const createButton = document.getElementById("create");
 
 function obtenerHtmlSinScriptsInnecesarios() {
+
+    
+
     // Clonar todo el documento para evitar modificar el DOM real
     const copiaDocumento = document.documentElement.cloneNode(true);
 
@@ -221,9 +359,28 @@ function obtenerHtmlSinScriptsInnecesarios() {
 }
 
 createButton.addEventListener("click",()=>{
+
     const notCheckedArray = [...document.getElementsByClassName("not-checked")];
     for(const notChecked of notCheckedArray){
         notChecked.remove();
+    }
+
+    const blueBordersArray = [...document.querySelectorAll(".row:not(.boxed),.column:not(.boxed),#noticia p:not(.boxed),#noticia h2:not(.boxed),#noticia span:not(.boxed)")];
+    if(isPreview){
+        for(const blueBorder of blueBordersArray){
+            blueBorder.style.borderColor = "blue";
+        }
+        isPreview = !isPreview;
+    } else {
+        for(const blueBorder of blueBordersArray){
+            blueBorder.style.borderColor = "transparent";
+        }
+        isPreview = !isPreview;
+    }
+
+    const selectDivsArray = [...document.getElementsByClassName("selection-div")];
+    for(const selectDiv of selectDivsArray){
+        selectDiv.remove();
     }
     document.getElementById("controls").remove();
     document.querySelector("main").innerHTML += `<section id="html-text"></section>`;
@@ -235,11 +392,11 @@ createButton.addEventListener("click",()=>{
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/header.css">
-        <link rel="stylesheet" href="../styles/footer.css">
-        <link rel="stylesheet" href="../styles/base.css">
-        <link rel="stylesheet" href="../styles/noticia.css"> 
-        <title>Fuente Conservadora - Crear</title> 
+        <link rel="stylesheet" href="../../styles/header.css">
+        <link rel="stylesheet" href="../../styles/footer.css">
+        <link rel="stylesheet" href="../../styles/base.css">
+        <link rel="stylesheet" href="../../styles/noticia.css"> 
+        <title>Fuente Conservadora - ${document.querySelector("#noticia h2").textContent}</title> 
 
     </head>
 
@@ -248,13 +405,13 @@ createButton.addEventListener("click",()=>{
         <header>
 
             <div>
-                <img src="images/logo.png"><h1>FUENTE CONSERVADORA</h1>
+                <img src="../../images/logo.png"><h1>FUENTE CONSERVADORA</h1>
             </div>
 
             <nav>
                 <ul>
-                    <li><a href="index.html">Noticias</a></li>
-                    <li><a href="dolar.html">Dolar</a></li>
+                    <li><a href="../../index.html">Noticias</a></li>
+                    <li><a href="../../dolar.html">Dolar</a></li>
                     <li><a href="#redes-nav">Redes</a></li>
                 </ul>
             </nav>
@@ -266,7 +423,7 @@ createButton.addEventListener("click",()=>{
             <section id="noticia">
                 ${document.getElementById("noticia").innerHTML}
             </section>
-            
+
             <button id="share">Compartir ➥</button>
 
         </main>
@@ -281,7 +438,7 @@ createButton.addEventListener("click",()=>{
             </nav>
         </footer>
 
-        <script src="crear.js"></script>
+        <script src="../../noticia.js"></script>
 
     </body>
 

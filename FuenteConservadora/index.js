@@ -50,7 +50,7 @@ const cargarNoticias = ()=>{
     for(const noticia of noticiasToDisplay){
         stringElement += `
             <article id="${noticia["id"]}" class="noticia">
-                <a href="noticias/htmls/${noticia["id"] + ".html"}" target="_blank">
+                <a href="noticias/htmls/${noticia["id"] + ".html"}" target="">
                     <img src="${noticia["image-link"]}">
                     <p>| ${noticia["topic"]}</p>
                     <h2>${noticia["title"]}</h2>

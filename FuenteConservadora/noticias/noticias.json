@@ -1,100 +1,121 @@
 [
     {
+        "title":"MELONI SANCIONA UNA \"LEY ANTIPIQUETES\"",
+        "topic":"Internacional",
+        "image-link": "https://interferencia.cl/sites/default/files/styles/article/public/meloni_giorgia.jpg?itok=eewPsR5l&amp;c=1c74f5aa95c76b30776bab981f139061",
+        "id": "2024-10-1-0",
+        "date":"1/10/2024"  
+    },
+    {
+        "title":"CASTRACIÓN QUÍMICA PARA DELINCUENTES",
+        "topic":"Internacional",
+        "image-link": "https://www.governo.it/sites/governo.it/files/styles/860x600/public/7904DEFC-2001-44B6-9DC7-03F8D53961BD%20%281%29.JPEG?itok=J3H-u72K",
+        "id": "2024-9-30-0",
+        "date":"30/9/2024"  
+    },
+    {
+        "title":"APROBADA LA LEY DE DATOS GENÉTICOS",
+        "topic":"Politica",
+        "image-link": "https://reportecba.com.ar/wp-content/uploads/2024/09/villarruel-1068x712.jpg",
+        "id": "2024-9-27-0",
+        "date":"27/9/2024"  
+    },
+    {
+        "title":"UNA GUERRA DENTRO DEL KIRCHNERISMO",
+        "topic":"Politica",
+        "image-link": "https://media.diariopopular.com.ar/p/2cd48b3d83c9dc047af657f0cc32ff1c/adjuntos/143/imagenes/008/065/0008065279/1140x0/smart/kicillof-y-maximo-kirchner-claramente-posicionados-el-lado-cristina.jpg",
+        "id": "2024-9-25-0",
+        "date":"25/9/2024"  
+    },
+    {
         "title":"DERECHAZO DE MILEI A LA AGENDA 2030",
         "topic":"Politica",
-        "image-link": "https://radiomitre.cienradios.com/resizer/sAIKDa4LNVXFPMn1QCF5Sv1g5ks=/arc-photo-radiomitre/arc2-prod/public/KGPU2ZRELBADROOCYSREUW7HPE.jpg",
-        "id": "24-9-2024-0",
-        "date":"24/9/2024" 
+        "image-link": "https://www.villalongahoy.com.ar/images/noticias/445835.jpg",
+        "id": "2024-9-24-0",
+        "date":"24/9/2024"  
     },
     {
         "title":"\"CRISTINA, NO VAS A VOLVER A GOBERNAR\"",
         "topic":"Politica",
-        "image-link": "https://www.infobae.com/new-resizer/fPCBbO2Mmzvz-R7_XhtAYIzQRXI=/992x558/filters:format(webp):quality(85)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/09/28130410/Luis-Caputo-acto-1920-1.jpg",
-        "id": "23-9-2024-0",
-        "date":"23/9/2024"
+        "image-link": "https://www.primeraedicion.com.ar/uploads/2018/03/12/d0d68ba1ac3828dfa03c3a1459771b65.jpg",
+        "id": "2024-9-23-0",
+        "date":"23/9/2024"  
     },
     {
         "title":"\"NO VAMOS A ADHERIR A LA AGENDA 2045\"",
         "topic":"Politica",
         "image-link": "https://upload.wikimedia.org/wikipedia/commons/8/83/Canciller_Diana_Elena_Mondino_en_Deciembre_2023_-_1_%28cropped%29.jpg",
-        "id": "22-9-2024-0",
-        "date":"22/9/2024"
+        "id": "2024-9-22-0",
+        "date":"22/9/2024"  
     },
     {
         "title":"SE PRIVATIZARÁ AEROLÍNEAS ARGENTINAS",
         "topic":"Economia",
         "image-link": "https://mf.b37mrtl.ru/actualidad/public_images/2024.08/article/66b631fd59bf5b5d5445241f.jpg",
-        "id": "19-9-2024-1",
-        "date":"19/9/2024"
+        "id": "2024-9-19-1",
+        "date":"19/9/2024"  
     },
     {
-        "title":"CON MILEI TE VAS A PODER ARMAR LA PC",
-        "topic":"Economia",
-        "image-link": "https://www.clarin.com/img/2024/09/15/IwSabJDbL_1256x620__1.jpg",
-        "id": "19-9-2024-0",
-        "date":"19/9/2024"
-    },
-    {
-        "title":"\"UNA MIERD( TODAS LAS PELÍCULAS ARGENTINAS\"",
+        "title":"\"UNA MIERD* TODAS LAS PELÍCULAS ARGENTINAS\"",
         "topic":"Politica",
-        "image-link": "https://www.infobae.com/new-resizer/LpvPglvRR4uoVvxbrrdV-G7KNaM=/992x661/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/73RI5NJQEVCHFNQ6CCNBF3NFFQ.jpg",
-        "id": "18-9-2024-0",
-        "date":"18/9/2024"
+        "image-link": "https://images.pagina12.com.ar/styles/focal_3_2_960x640/public/2023-10/778194-6529b7ac34471-1200.jpg?h=c74750f6&itok=_oYHxLb3",
+        "id": "2024-9-18-0",
+        "date":"18/9/2024"  
     },
     {
         "title":"\"CEPO AL ESTADO\"",
         "topic":"Politica",
-        "image-link": "https://www.sandiegouniontribune.com/wp-content/uploads/migration/2024/03/15/0000018e-42c2-d17c-abce-7afaeae00001.jpg?w=879",
-        "id": "16-9-2024-0",
-        "date":"16/9/2024"
+        "image-link": "https://www.lanacion.com.ar/resizer/v2/javier-milei-durante-la-apertura-de-sesiones-MZPUQPLLUFE25GGGVRIPBYIONM.jpg?auth=dc0f059f93c44ec37db8b301edcb71e6bf23e31c7f0cfaea3110a546689fcc3b&width=880&height=586&quality=70&smart=true",
+        "id": "2024-9-15-0",
+        "date":"15/9/2024"  
     },
     {
         "title":"¿MACRI ACORDÓ CON EL KIRCHNERISMO?",
         "topic":"Politica",
-        "image-link": "https://www.elteclado.com.ar/fotos/2023/08/08_macri_cfk.jpg",
-        "id": "21-8-2024-0",
-        "date":"21/8/2024"
+        "image-link": "https://www.lanacion.com.ar/resizer/v2/organizada-por-argra-se-inaugura-la-31°-muestra-GS23OVVDTNGC3A3ZKHSJ4IXNLI.jpg?auth=63f66b6218fe8821c36dbcddcc88fd037a3a57cb0e98f83ee9269094e0981994&width=880&height=586&quality=70&smart=true",
+        "id": "2024-8-21-0",
+        "date":"21/8/2024"  
     },
     {
         "title":"\"LA PALABRA DE FABIOLA VALE POCO\"",
         "topic":"Politica",
-        "image-link": "https://www.ellitoral.com/images/2022/03/10/lfDeiasgl_1300x655__1.jpg",
-        "id": "12-8-2024-0",
-        "date":"12/8/2024"
+        "image-link": "https://www.ellitoral.com/images/2024/08/13/-iQzzDnJX_1300x655__1.jpg",
+        "id": "2024-8-12-0",
+        "date":"12/8/2024"  
     },
     {
         "title":"NUEVA CAUSA CONTRA ALBERTO FERNÁNDEZ",
         "topic":"Politica",
-        "image-link": "https://uscdn.eltribuno.com/092024/1725425724691.webp?cw=1155&ch=650&extw=jpg",
-        "id": "4-8-2024-0",
-        "date":"4/8/2024"
+        "image-link": "https://uscdn.eltribuno.com/092024/1725425724691.webp?cw=768&ch=432&extw=jpg",
+        "id": "2024-8-4-0",
+        "date":"4/8/2024"  
     },
     {
-        "title":"LOS NÚMEROSOS DE LA DICTADURA DE MADURO",
+        "title":"LOS NÚMEROS DE LA DICTADURA DE MADURO",
         "topic":"Internacional",
-        "image-link": "https://es.theepochtimes.com/assets/uploads/2019/07/maduro-1200x864-795x447.jpg",
-        "id": "30-7-2024-0",
-        "date":"30/7/2024"
+        "image-link": "https://static.dw.com/image/46515852_605.webp",
+        "id": "2024-7-30-0",
+        "date":"30/7/2024"  
     },
     {
-        "title":"EL DICTADOR MADURO SE ROBA LAS ELECCIONES",
+        "title":"EL DICTADOR DE MADURO SE ROBA LAS ELECCIONES",
         "topic":"Internacional",
         "image-link": "https://upload.wikimedia.org/wikipedia/commons/0/06/Maduro_cropped.jpg",
-        "id": "29-7-2024-2",
-        "date":"29/7/2024"
+        "id": "2024-7-29-2",
+        "date":"29/7/2024"  
     },
     {
         "title":"\"AFUERA DICTADOR\"",
-        "topic":"Politica",
-        "image-link": "https://images.pagina12.com.ar/styles/focal_3_2_960x640/public/2024-02/816123-814082-milei-20tuits-20ley-20omnibus_0.jpg?h=b3660f0d&itok=2BOyL-WV",
-        "id": "29-7-2024-1",
-        "date":"29/7/2024"
+        "topic":"Internacional",
+        "image-link": "https://fotos.perfil.com/2023/04/22/trim/987/555/20230422mileilalibertadavanzag-1552305.jpg?webp",
+        "id": "2024-7-29-1",
+        "date":"29/7/2024"  
     },
     {
         "title":"\"MADURO RECONOZCA SU DERROTA\"",
-        "topic":"Politica",
+        "topic":"Internacional",
         "image-link": "https://www.lapoliticaonline.com/files/image/230/230005/668c006228101_940_529!.png?s=c62b08b29703085c7809bb0e28a548cf&d=1720451477",
-        "id": "29-7-2024-0",
-        "date":"29/7/2024"
+        "id": "2024-7-29-0",
+        "date":"29/7/2024"  
     }
 ]

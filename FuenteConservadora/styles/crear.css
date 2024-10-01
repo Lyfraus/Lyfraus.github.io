@@ -17,6 +17,33 @@
     min-width: 50px;
 }
 
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.row:not(.boxed),.column:not(.boxed),#noticia p:not(.boxed),#noticia h2:not(.boxed){
+    border: 3px solid blue;
+}
+
+.row .buttons{
+    flex-direction: column;
+}
+
+.box-type{
+    width: 50px;
+}
+
+.selection-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
 .check-button, .remove-button{
     height: 50px;
     width: 50px;
@@ -44,11 +71,14 @@
 
 .not-checked{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin: 10px;
+    padding: 10px;
+    border: 3px solid red;
 }
 
 #noticia{
@@ -67,4 +97,9 @@
     font-size: .9em;
     border-radius: 5px;
     border: 5px solid rgb(29, 29, 29);
+}
+
+
+.row.not-checked,.column.not-checked,.list.not-checked,.selection-div, .not-checked{
+    border: 3px solid red;
 }
