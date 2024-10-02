@@ -78,7 +78,7 @@ header ul{
     width: 100%;
 }
 
-header a{
+header a:not(.linkedImage){
     color: #FBF6F0;
     text-align: center;
     width: 100%;
